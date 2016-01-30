@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>留言板</title>
+</head>
+<body>
+  <div id="container">
+      <div id="header">
+        <div class="wrap">
+            <div class="query-box">
+                <input id="query-input" type="text" placeholder="输入您想查询的内容...">
+            </div>
+            <select class="query-select">
+                <option selected="selected" value="id">id</option>
+                <option value="author">作者</option>
+            </select>
+        </div>
+      </div>
+      <div id="main">
+        <div class="wrap">
+            <div style="width: 100%;height: 90px">
+                <a class="btn-large btn-ques"></a>
+                <div class="announcement">
+                    <p class="title">公告</p>
+                    <marquee id="affiche" class="announcement-text" align="left" behavior="scroll" direction="left"
+                             hspace="50" loop="-1" scrollamount="2" scrolldelay="70" onMouseOut="this.start()"
+                             onMouseOver="this.stop()">暂无公告
+                    </marquee>
+                </div>
+            </div>
+            <table >
+              <tr align="center" id="head" class="tableHead">
+                <td width="50">id</td>
+                <td width="940">message</td>
+                <td width="100">author</td>
+                <td width="130">time</td>
+                <td width="50">操作</td>
+              </tr>
+            </table>
+        <div class="pagination">
+            <ul class="pagination">
+              <li><a href="#">&laquo;</a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li class="disabled"><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+      </div>
+  </div>
+
+
+
+</body>
+</html>
