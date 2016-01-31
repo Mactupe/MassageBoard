@@ -2,31 +2,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
     <title>留言板</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
 <body>
-  <div id="container">
-      <div id="header">
-        <div class="wrap">
-            <div class="query-box">
-                <input id="query-input" type="text" placeholder="输入您想查询的内容...">
-            </div>
-            <select class="query-select">
-                <option selected="selected" value="id">id</option>
-                <option value="author">作者</option>
-            </select>
-        </div>
+  <div style="float:left;">
+        <form method="get">
+          <select name="mode" class="btn" style="padding: 0.2em 1em;">
+            <option value="id">留言ID</option>
+            <option value="author">留言作者</option>
+          </select>
+          <input type="text" style="background-color:   transparent;   border:   0px"
+          name="query" size="20" class="Msgtext" placeholder="输入为空即查询全部" >
+          <input type="submit" value="查询" class="btn" style="padding: 0.3em 1em;">
+        </form>
+      </div>
+      <div style="float:right;">
+        <a href="add"><button class="btn" >添加留言</button></a>
       </div>
       <div id="main">
         <div class="wrap">
             <div style="width: 100%;height: 90px">
                 <a class="btn-large btn-ques"></a>
                 <div class="announcement">
-                    <p class="title">公告</p>
                     <marquee id="affiche" class="announcement-text" align="left" behavior="scroll" direction="left"
                              hspace="50" loop="-1" scrollamount="2" scrolldelay="70" onMouseOut="this.start()"
-                             onMouseOver="this.stop()">暂无公告
+                             onMouseOver="this.stop()">旧爱的誓言像及了一个巴掌
                     </marquee>
                 </div>
             </div>
@@ -39,17 +41,16 @@
                 <td width="50">操作</td>
               </tr>
             </table>
-        <div class="pagination">
+      <div style="float:left;">
             <ul class="pagination">
-              <li><a href="#">&laquo;</a></li>
-              <li class="active"><a href="#">1</a></li>
-              <li class="disabled"><a href="#">2</a></li>
+              <li class="current"><a href="#">&laquo;</a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
               <li><a href="#">3</a></li>
               <li><a href="#">4</a></li>
               <li><a href="#">5</a></li>
               <li><a href="#">&raquo;</a></li>
             </ul>
-        </div>
       </div>
   </div>
 
